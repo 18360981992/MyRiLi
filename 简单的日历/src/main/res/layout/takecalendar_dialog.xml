@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical">
+
+        <!-- 日历时间选择栏 -->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:background="#ffffff"
+            >
+            <ImageView
+                android:id="@+id/iv_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:contentDescription="@null"
+                android:background="@drawable/left_arrow"
+                android:layout_marginLeft="10dp"
+                />
+            <ImageView
+                android:id="@+id/iv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@null"
+                android:background="@drawable/right_arrow"
+                android:layout_marginRight="10dp"
+                />
+            <LinearLayout
+                android:id="@+id/date_operator_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal" >
+                <TextView
+                    android:id="@+id/tv_today"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="5dp"
+                    android:text="今"
+                    android:gravity="center"
+                    android:background="#FFD700"
+                    android:textColor="#ffffff"
+                    android:textSize="17sp"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="#93C73C"
+                    android:textSize="18sp"
+                    android:text="2018年5月28日" />
+                <TextView
+                    android:id="@+id/week_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#93C73C"
+                    android:textSize="20sp"
+                    android:text="" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#FFF"
+            >
+            <com.ifeng_tech.spotmall.jiandanrili.WeekDayView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/weekDayView"
+                />
+
+            <com.ifeng_tech.spotmall.jiandanrili.MonthDateView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/monthDateView"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

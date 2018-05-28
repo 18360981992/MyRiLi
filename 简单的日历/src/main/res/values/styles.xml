@@ -1,0 +1,36 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="dialog_setting" parent="@android:style/Theme.Dialog">
+        <!--// 设置背景色-->
+            <item name="android:windowBackground">@color/touming</item>
+        <!--这个说明提示框是否有边框-->
+            <item name="android:windowFrame">@null</item>
+        <!--这个说明提示框是否有标题-->
+            <item name="android:windowNoTitle">true</item>
+        <!--这个说明提示框是否是浮动的-->
+            <item name="android:windowIsFloating">true</item>
+        <!--这个说明提示框是滞是透明的-->
+            <item name="android:windowIsTranslucent">true</item>
+        <!--Dialog进出的显示动画-->
+            <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <!-- 显示对话框时当前的屏幕是否变暗 -->
+            <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!--控制dialog进出动画-->
+    <style name="dialog_animation" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/dialog_enter</item>
+        <!-- 进入时的动画 -->
+        <item name="@android:windowExitAnimation">@anim/dialog_exit</item>
+        <!-- 退出时的动画 -->
+    </style>
+
+</resources>
